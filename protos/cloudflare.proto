@@ -1,0 +1,36 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package logo;
+
+// The greeting service definition.
+service CloudflareProto {
+  // Sends a greeting
+  rpc push_kv(CloudflarePutKVRequest) returns (CloudflarePutKVResponse) {}
+}
+
+message CloudflarePutKVRequest {
+  string cloudflare_account = 1;
+  string cloudflare_namespace = 2;
+  string cloudflare_email = 3;
+  string cloudflare_auth_key = 4;
+  string key = 5;
+  string value = 6;
+}
+
+message CloudflarePutKVResponse {
+  bool status = 1;
+}

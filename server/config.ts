@@ -1,0 +1,12 @@
+
+
+const SERVICE_PATH_ROOT = __dirname + "/../..";
+const SERVICE_PATH_PROTOS = SERVICE_PATH_ROOT + "/protos";
+const SERVICE_SERVER_IP = "0.0.0.0";
+const SERVICE_SERVER_PORT = "50051";
+export default {
+    SERVICE_PATH_ROOT,
+    SERVICE_PATH_PROTOS,
+    SERVICE_SERVER_IP,
+    SERVICE_SERVER_PORT
+};
